@@ -11,7 +11,7 @@ def export_coll_to_json(output_dir: str = "production_data/raw_data_dump"):
     os.makedirs(output_dir, exist_ok=True)
     print(f"Folder created successfully at {output_dir}")
 
-    db = client['monitoring']
+    db = client['db_name']
     collection_names = db.list_collection_names()
     print("Collections found:", collection_names)
 
